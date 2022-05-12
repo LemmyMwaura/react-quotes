@@ -1,35 +1,37 @@
 import '../styles/App.css';
 import FormComponent from './FormComponent';
 import QuoteList from './QuoteList';
+import { v4 as uuid } from 'uuid';
 
 function App() {
   return (
-    <>
-      <h2>Form</h2>
-      <FormComponent/>
-      <QuoteList quotes={sampleQuotes}/>
-    </>
+    <div className='app-container'>
+      <div className="wrapper">
+        <FormComponent/>
+        <QuoteList quotes={sampleQuotes}/>
+      </div>
+    </div>
   );
 }
 
 const sampleQuotes = [
   {
-    id:1,
+    id:uuid(),
     author:'Mahatma Gandhi',
     message:'Live as if you were to die tomorrow. Learn as if you were to live forever.'
   },
   {
-    id:2,
+    id:uuid(),
     author:'Friedrich Nietzsche',
     message:'That which does not kill us makes us stronger.'
   },
   {
-    id:3,
+    id:uuid(),
     author:'Virginia Satir',
     message:'We must not allow other people’s limited perceptions to define us.'
   },
   {
-    id:4,
+    id:uuid(),
     author:'Theodore Roosevelt',
     message:'Do what you can, with what you have, where you are.'
   }
