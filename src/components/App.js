@@ -1,6 +1,6 @@
-import './App.css';
-import FormComponent from './components/FormComponent';
-import QuoteList from './components/QuoteList';
+import '../styles/App.css';
+import FormComponent from './FormComponent';
+import QuoteList from './QuoteList';
 
 function App() {
   return (
