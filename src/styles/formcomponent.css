@@ -1,0 +1,10 @@
+.form-wrapper{
+  padding: 2rem;
+  background-color: #fae4ec;
+}
+
+.quote-form{
+  align-items: left;
+  width: 100%;
+  border-radius: 0.5rem;
+}

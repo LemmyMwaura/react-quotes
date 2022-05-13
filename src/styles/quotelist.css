@@ -1,0 +1,8 @@
+.quotes-wrapper{
+  align-items: left;
+}
+
+.quotes{
+  display: grid;
+  gap: 1rem;
+}
