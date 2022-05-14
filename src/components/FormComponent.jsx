@@ -4,11 +4,12 @@ import { useForm } from "react-hook-form"
 
 export default function FormComponent() {
   const { handleQuoteAdd } = useContext(QuoteContext)
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, reset } = useForm()
 
   const onSubmit = (data) => {
     const {author, message} = data
     handleQuoteAdd(author, message)
+    reset()
   }
 
   return (
