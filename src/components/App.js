@@ -8,10 +8,12 @@ import { v4 as uuid } from 'uuid';
 export const QuoteContext = React.createContext()
 function App() {
   const [quotes, setQuotes] = useState(sampleQuotes)
+  const [showForm, setShowForm] = useState(false)
 
   const quoteContextValue = {
     handleQuoteDelete,
-    handleQuoteAdd
+    handleQuoteAdd,
+    setShowForm
   }
 
   function handleQuoteAdd(author, message,){
@@ -35,7 +37,7 @@ function App() {
       <div className='app-container'>
         <div className="wrapper">
           <Header/>
-          <FormComponent/>
+          {showForm && <FormComponent/>}
           <QuoteList quotes={quotes}/>
         </div>
       </div>
