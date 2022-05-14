@@ -15,6 +15,7 @@ body{
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(180deg,#FB1834, #FB2B90);
   padding: 2rem 0;
+  min-height: 100vh;
 }
 
 .app-container{

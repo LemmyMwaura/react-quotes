@@ -1,18 +1,34 @@
+import React, { useState } from 'react';
 import '../styles/App.css';
 import FormComponent from './FormComponent';
 import QuoteList from './QuoteList';
 import Header from './Header';
 import { v4 as uuid } from 'uuid';
 
+export const QuoteContext = React.createContext()
 function App() {
+  const [quotes, setQuotes] = useState(sampleQuotes)
+
+  const quoteContextValue = {
+    handleDelete
+  }
+  
+  function handleDelete(id){
+    setQuotes(quotes.filter(quote => {
+      return quote.id !== id
+    }))
+  }
+
   return (
-    <div className='app-container'>
-      <div className="wrapper">
-        <Header/>
-        <FormComponent/>
-        <QuoteList quotes={sampleQuotes}/>
+    <QuoteContext.Provider value={quoteContextValue}>
+      <div className='app-container'>
+        <div className="wrapper">
+          <Header/>
+          <FormComponent/>
+          <QuoteList quotes={quotes}/>
+        </div>
       </div>
-    </div>
+    </QuoteContext.Provider>
   );
 }
 
