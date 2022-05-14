@@ -1,12 +1,14 @@
 import '../styles/App.css';
 import FormComponent from './FormComponent';
 import QuoteList from './QuoteList';
+import Header from './Header';
 import { v4 as uuid } from 'uuid';
 
 function App() {
   return (
     <div className='app-container'>
       <div className="wrapper">
+        <Header/>
         <FormComponent/>
         <QuoteList quotes={sampleQuotes}/>
       </div>
