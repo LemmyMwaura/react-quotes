@@ -7,7 +7,7 @@ import { QuoteContext } from './App';
 export default function Quote({id,author,message}) {
   const [upvote, setUpvote] = useState(1)
   const [downvote, setDownvote] = useState(0)
-  const {handleDelete} = useContext(QuoteContext)
+  const {handleQuoteDelete} = useContext(QuoteContext)
 
   return (
     <>
@@ -34,7 +34,7 @@ export default function Quote({id,author,message}) {
             > <span>Total Votes: {upvote + downvote}</span> 
               <button 
                 className='btn delete-btn'
-                onClick={() => {handleDelete(id)}}
+                onClick={() => {handleQuoteDelete(id)}}
               >
                 <FaTrashAlt color='#9391ff' size="1rem"/>
               </button>

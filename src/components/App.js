@@ -10,10 +10,21 @@ function App() {
   const [quotes, setQuotes] = useState(sampleQuotes)
 
   const quoteContextValue = {
-    handleDelete
+    handleQuoteDelete,
+    handleQuoteAdd
+  }
+
+  function handleQuoteAdd(author, message,){
+    if( message == null || author == null ) return
+    let newQuote = {
+      id:uuid(),
+      author:author,
+      message:message
+    }
+    setQuotes([...quotes,newQuote])
   }
   
-  function handleDelete(id){
+  function handleQuoteDelete(id){
     setQuotes(quotes.filter(quote => {
       return quote.id !== id
     }))

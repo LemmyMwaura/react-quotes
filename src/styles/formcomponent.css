@@ -39,3 +39,12 @@
 .form-input:active{
   border: #97164c;
 }
+
+.submit-btn{
+  width: 100%;
+  background-color: #97164c;
+  color: black;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin-top: 1.8rem;
+}
