@@ -5,6 +5,12 @@
 @import './quote.css';
 @import './quotelist.css';
 
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 body{
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(180deg,#FB1834, #FB2B90);
