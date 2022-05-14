@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div className='header'>
       <h1>QuoteMeApp</h1>
-      <button>Add</button>
+      <button className='btn'>Add</button>
     </div>
   )
 }

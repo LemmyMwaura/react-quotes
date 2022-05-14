@@ -10,9 +10,8 @@ export default function Quote({message, author}) {
         <h1 className="author">{author}</h1>
         <div className="footer">
           <div className="like">
-            <button>Upvote</button>
-            <i class='bx bx-upvote'></i>
-            <button>Downvote</button>
+            <button className="btn">Upvote</button>
+            <button className="btn">Downvote</button>
           </div>
           <div className="total">Total Votes: {1}</div>
         </div>

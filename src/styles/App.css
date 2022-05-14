@@ -27,3 +27,14 @@ body{
   border-radius: 0.5rem;
   background-color:rgba(255,255,255,0.8);
 }
+
+.btn{
+  border:none;
+  outline:none;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.3rem;
+}
+
+.btn:active{
+  transform: scale(0.90);
+}
