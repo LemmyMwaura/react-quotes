@@ -7,14 +7,14 @@ export default function Header() {
 
   return (
     <div className='header'>
-      <h1>QuoteMeApp</h1>
+      <h1 className='title'>QuoteMeApp</h1>
       <button 
-        className='btn'
+        className='btn header-btn'
         onClick={() => {
           setShowForm(prevValue => !prevValue)
           setValue(prevValue => {
             if (prevValue === 'Open') return 'Close'
-            else return 'Add'
+            else return 'Open'
           })
         }
       }
